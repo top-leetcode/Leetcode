@@ -4,10 +4,11 @@ class Solution {
         arrayStr = str.toCharArray();
         
         for(int i=0; i< arrayStr.length; i++) {
-            if(97<=arrayStr[i] && arrayStr[i]<=122) {
-                arrayStr[i]=(char)(arrayStr[i]-32);
+            if(65<=arrayStr[i] && arrayStr[i]<=90) {
+                arrayStr[i]=(char)(arrayStr[i]+32);
             }
         }
+        
         String b = new String(arrayStr);
         return b;
     }
