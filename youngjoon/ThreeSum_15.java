@@ -15,55 +15,89 @@ public class ThreeSum_15 {
 		System.out.println(three.threeSum(nums).toString());
 	}
 
-    public List<List<Integer>> threeSum(int[] nums) {
+	 public List<List<Integer>> threeSum(int[] nums) {
+	    	final int checkSum = 0;
+	    	
+	        List<List<Integer>> zeroList = new ArrayList<List<Integer>>();
+	        
+	        Arrays.parallelSort(nums);
+	        
+	        int firstNumLimit = nums.length-2;
+	        int secondNumLimit = nums.length-1;
+	        
+	        int iMidPos = 0;
+	        int iStartPos = 0;
+	        int iLastPos = 0;
+	        int findNum = 0;
+	        int secondStartPos = 0;
+	        
+	        for (int i=0; i <firstNumLimit ; i++) {
+	        	
+	        	if (i == 0 || (i > 0 && nums[i] != nums[i-1])) {
+	                secondStartPos = i+1;
+		        	for (int j=secondStartPos; j < secondNumLimit; j++) {
+		        		if (j == secondStartPos || (j > secondStartPos && ( nums[j] != nums[j-1]))) {
+			            	findNum = checkSum - (nums[i] + nums[j]);
+			
+			            	iStartPos = j+1;
+			            	iLastPos = secondNumLimit;
+			            	while (iStartPos <= iLastPos) {
+			            		iMidPos = (iStartPos + iLastPos) /2;
+			            		
+			            		if (nums[iMidPos] == findNum) {
+			            			
+			       					zeroList.add(Arrays.asList(nums[i], nums[j], nums[iMidPos]));
+			        				
+			        				break;
+			        				
+			            		} else if (nums[iMidPos] < findNum) {
+			            			iStartPos = iMidPos + 1;
+			            			
+			            		} else {
+			            			iLastPos = iMidPos - 1;
+			            			
+			            		}
+			            	}
+		        		}
+		        	}
+	        	}
+	        }
+	        
+	    	return zeroList;
+	    }
+	 
+    
+    public List<List<Integer>> threeSum2(int[] nums) {
     	final int checkSum = 0;
     	int tempSum = 0;
     	boolean bNext = false;
     	
         List<List<Integer>> zeroList = new ArrayList<List<Integer>>();
-        List<Integer> intList = null;
+        
         
         Arrays.parallelSort(nums);
         
         int firstNumLimit = nums.length-2;
         int secondNumLimit = nums.length-1;
-        int thirdNumLimit = nums.length;
+
         
         int iMidPos = 0;
         int iStartPos = 0;
         int iLastPos = 0;
         int findNum = 0;
         
-        for (int i=0; i <firstNumLimit ; i++) {
+        for (int i=0; i < nums.length -2 ; i++) {
         	
-        	for (int j=i+1; j < secondNumLimit; j++) {
-            	
-            	findNum = checkSum - (nums[i] + nums[j]);
+        	iStartPos = i+1;
+        	iLastPos = nums.length-1;
 
-            	iStartPos = j+1;
-            	iLastPos = thirdNumLimit-1;
-            	while (iStartPos <= iLastPos) {
-            		iMidPos = (iStartPos + iLastPos) /2;
-            		
-            		if (nums[iMidPos] == findNum) {
-            			intList = new ArrayList<Integer>();
-        				intList.add(nums[i]);
-        				intList.add(nums[j]);
-        				intList.add(nums[iMidPos]);
-        				
-        				if (!zeroList.contains(intList))
-        					zeroList.add(intList);
-        				
-        				break;
-        				
-            		} else if (nums[iMidPos] < findNum) {
-            			iStartPos = iMidPos + 1;
-            			
-            		} else {
-            			iLastPos = iMidPos - 1;
-            			
-            		}
-            	}
+        	while (iStartPos < iLastPos) {
+        		
+        		if (nums[i] + nums[iStartPos] + nums[iLastPos] == checkSum) {
+        			// 저장
+        			//boolean add = zeroList.add(new List<Integer>(nums[i], nums[iStartPos]));
+        		}
+
         	}
         }
         
