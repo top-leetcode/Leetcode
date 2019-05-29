@@ -34,8 +34,19 @@
 
 ## 공통 문제 (1주에 2개씩) 
 
-### 2019.05.16 (5월 3주차)
+### 2019.05.16 (5월 2주차)
 
 - LeetCode To Lower Case (https://leetcode.com/problems/to-lower-case/)
+
+### 2019.05.20 (5월 3주차)
+
+- Palindrome Number (https://leetcode.com/problems/palindrome-number/)
+- Remove Duplicates from Sorted Array (https://leetcode.com/problems/remove-duplicates-from-sorted-array/)
+- 3Sum (https://leetcode.com/problems/3sum/)
+
+### 2019.05.27 (5월 4주차)
+
+- 509. Fibonacci Number(https://leetcode.com/problems/fibonacci-number/)
+- 905. Sort Array By Parity (https://leetcode.com/problems/sort-array-by-parity/)
 
 
