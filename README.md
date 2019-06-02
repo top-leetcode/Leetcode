@@ -47,6 +47,11 @@
 ### 2019.05.27 (5월 4주차)
 
 - 509. Fibonacci Number(https://leetcode.com/problems/fibonacci-number/)
-- 905. Sort Array By Parity (https://leetcode.com/problems/sort-array-by-parity/)
+- 905. Sort Array By Parity(https://leetcode.com/problems/sort-array-by-parity/)
+
+### 2019.06.02 (6월 1주차)
+
+- 993. Cousins in Binary Tree(https://leetcode.com/problems/cousins-in-binary-tree/)
+- 405. Convert a Number to Hexadecimal(https://leetcode.com/problems/convert-a-number-to-hexadecimal/)
 
 
