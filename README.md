@@ -51,7 +51,7 @@
 
 ### 2019.06.02 (6월 1주차)
 
--993. Cousins in Binary Tree(https://leetcode.com/problems/cousins-in-binary-tree/)
--405. Convert a Number to Hexadecimal(https://leetcode.com/problems/convert-a-number-to-hexadecimal/)
+- 993. Cousins in Binary Tree(https://leetcode.com/problems/cousins-in-binary-tree/)
+- 405. Convert a Number to Hexadecimal(https://leetcode.com/problems/convert-a-number-to-hexadecimal/)
 
 
